@@ -4,7 +4,7 @@
 
 _Project Aims:_
 * Model a wearable medical device that assists in providing a solution for individuals with frequent anxiety attacks.
-* Create a connection the the user's EMR to assist clinical staff in continuity of care.
+* Create a connection to the user's EMR to assist clinical staff in continuity of care.
 * Accompanying application (web/mobile) for users to track progress, stay connected, and in control.
 
 ## Links
