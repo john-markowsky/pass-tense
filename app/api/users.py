@@ -23,4 +23,3 @@ async def post_register(request: Request, data: dict):
 
     # register the user in the database
     register_user(first_name, last_name, email, password, user_type)
-
