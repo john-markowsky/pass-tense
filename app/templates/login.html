@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="ui grid mt-5 centered">
+  <div class="eight wide column">
+    <div class="ui segment text-center center aligned">
+      <div class="ui container">
+        <img src="static/logo-large.png" alt="Logo">
+      </div>
+      <div class="ui container left aligned">
+        <h2>Log In</h2>
+        <form class="ui form" method="post">
+          <div class="field">
+            <label>Username</label>
+            <input type="text" name="username" placeholder="Username" required>
+          </div>
+          <div class="field">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Password" required>
+          </div>
+          <div class="ui message">
+            New to Pass-Tense? <a href="/register">Create an account</a>
+          </div>
+          <div class="ui container">
+          <button type="submit" class="ui button teal">Log In</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

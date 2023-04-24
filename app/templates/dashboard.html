@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="ui grid mt-5 centered">
+  <div class="eight wide column">
+    <div class="ui segment text-center center aligned">
+      <div class="ui container">
+        <img src="static/logo-large.png" alt="Logo">
+      </div>
+      <div class="ui container left aligned">
+        <h2>Dashboard</h2>
+        <div class="ui three column grid">
+          <div class="column">
+            <div class="ui segment">
+              <div class="ui container image-container">
+                <img class="ui centered rounded image dashboard-image" src="static/history.png" alt="History">
+              </div>
+              <div class="ui container center aligned">
+                <button class="ui button teal">History</button>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui segment">
+              <div class="ui container image-container">
+                <img class="ui centered rounded image dashboard-image" src="static/journal.png" alt="Journal">
+              </div>
+              <div class="ui container center aligned">
+                <button class="ui button teal">Journal</button>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui segment">
+              <div class="ui container image-container">
+                <img class="ui centered rounded image dashboard-image" src="static/medical.png" alt="Talk to Doctor">
+              </div>
+              <div class="ui container center aligned">
+                <button class="ui button teal">Doctor</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .dashboard-image {
+    height: 100px;
+    width: 100px;
+  }
+
+  .image-container {
+    height: 120px;
+    width: 200px;
+    margin: 0 auto;
+  }
+</style>
+
+{% endblock %}

@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="ui grid mt-5 centered">
+  <div class="eight wide column">
+    <div class="ui segment text-center center aligned">
+      <div class="ui container">
+        <img src="static/logo-large.png" alt="Logo">
+      </div>
+      <div class="ui container left aligned">
+        <h2>Register</h2> 
+        <form class="ui form" id="register-form">
+          <div class="field">
+            <label>Account Type</label>
+            <select class="ui dropdown" name="user_type">
+              <option value="patient">Patient</option>
+              <option value="provider">Provider</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>First Name</label>
+            <input type="text" name="first_name" placeholder="First Name" required>
+          </div>
+          <div class="field">
+            <label>Last Name</label>
+            <input type="text" name="last_name" placeholder="Last Name" required>
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Email" required>
+          </div>
+          <div class="field">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Password" required>
+          </div>
+          <div class="field">
+            <label>Confirm Password</label>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+          </div>
+          <button type="submit" class="ui button teal">Register</button>
+        </form>
+        <div class="ui message">
+          Already have an account? <a href="/register">Log in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $("#register-form").submit(function(event) {
+      event.preventDefault();
+  
+      var formData = {
+        user_type: $('select[name="user_type"]').val(),
+        first_name: $('input[name="first_name"]').val(),
+        last_name: $('input[name="last_name"]').val(),
+        email: $('input[name="email"]').val(),
+        password: $('input[name="password"]').val(),
+        confirm_password: $('input[name="confirm_password"]').val()
+      };
+  
+      $.ajax({
+        url: "/register",
+        type: "POST",
+        contentType: "application/json",
+        data: JSON.stringify(formData),
+        success: function(response) {
+          alert("Registration successful!");
+          window.location.replace("/dashboard");
+        },
+        error: function(xhr, status, error) {
+          var errorMessage = JSON.parse(xhr.responseText).error;
+          $('.ui.error.message').text("Error: " + errorMessage).show();
+        }
+      });
+    });
+  });
+  </script>  
+{% endblock %}
