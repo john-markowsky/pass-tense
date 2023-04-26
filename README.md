@@ -14,4 +14,4 @@ _Web Application Screenshot:_
 
 ## Links
 * [Project Proposal PDF](https://drive.google.com/file/d/1cArIWAf38f___DCBpx4ymHR_7gEofRJ7/view?usp=share_link)
-* [E-Portfolio](https://pi.cs.oswego.edu/~klopane/bhi504/bhi504.html)
+* [E-Portfolio](https://pi.cs.oswego.edu/~klopane/passtense/bhi504_eportfolio/PassTensePortfolio.html)
