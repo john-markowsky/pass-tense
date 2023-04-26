@@ -15,7 +15,7 @@ def test_create_db_and_tables():
 # define test cases for egister_user
 def test_register_user():
     # register a new user
-    result = register_user('John', 'Doe', 'john.doe12@example.com', 'password', 'user')
+    result = register_user('John', 'Doe', 'john.doe.100@example.com', 'password', 'user')
 
     # check if the user was created successfully
     assert result == {"success": "User created successfully"}

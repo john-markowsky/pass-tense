@@ -33,3 +33,5 @@ async def dashboard(request: Request):
 @app.get("/login", response_class=HTMLResponse)
 async def login(request: Request):
     return templates.TemplateResponse("login.html", {"request": request})
+
+# export PYTHONPATH=$PYTHONPATH:/workspaces/pass-tense/app
